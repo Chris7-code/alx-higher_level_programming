@@ -1,15 +1,10 @@
 #!/usr/bin/python3
-import sys
 
 
-def safe_function(fct, *args):
+
+def safe_print_integer(value):
     try:
-        result = fct(*args)
-    except ZeroDivisionError:
-        result = None
-        sys.stderr.write("Exception: division by zero\n")
-    except IndexError:
-        result = None
-        sys.stderr.write("Exception: list index out of range\n")
-
-    return result
+        print('{:d}'.format(value))
+        return True
+    except (TypeError, ValueError):
+        return False

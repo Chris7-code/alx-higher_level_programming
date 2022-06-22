@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Square Class
 
-A square Class
+A Square Class
 
 """
 
